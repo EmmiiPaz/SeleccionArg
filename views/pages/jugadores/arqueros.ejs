@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Arqueros</title>
+</head>
+<body>
+    <!-- <%= JSON.stringify(arqueros) %> -->
+
+    <table style="border: solid 2px #000;">
+        <h1>Arqueros</h1>
+        <% arqueros.forEach(function(arquero){ %>
+            <tr>
+                <th><%= arquero.nombre %></th>
+                <th><%= arquero.apellido %></th>
+                <th><%= arquero.edad %></th>
+                <th><%= arquero.equipo %></th>
+                <th><a href="/arqueros/entrenar/<%=arquero.nombre%>">Entrenar</a></th>
+            </tr>
+        <% }); %>
+      
+    </table>
+
+    
+</body>
+</html>
